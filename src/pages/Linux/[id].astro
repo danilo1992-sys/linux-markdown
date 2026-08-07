@@ -1,0 +1,58 @@
+---
+import {getCollection, render} from 'astro:content'
+import Layout from "../../layouts/Layout.astro"
+import Tabs from "../../components/Tabs.astro"
+
+const markdownFiles = import.meta.glob('/src/content/Linux/*.md', { query: '?raw', import: 'default' });
+
+export async function getStaticPaths(){
+  const bash = await getCollection("Linux")
+  return bash.map((bash) => ({
+    params: {id: bash.id},
+    props: {bash}
+  }))
+}
+
+const {bash} = Astro.props 
+const {name, description} = bash.data 
+const {Content} = await render(bash)
+
+const rawContent = await markdownFiles[`/src/content/Linux/${bash.id}.md`]();
+
+function splitBySections(content) {
+  const sections = content.split(/^## /m).filter(Boolean);
+  const result = { descripcion: '', sintaxis: '', ejemplos: '' };
+  
+  sections.forEach(section => {
+    const lines = section.split('\n');
+    const title = lines[0].trim();
+    const body = lines.slice(1).join('\n').trim();
+    
+    if (title.toLowerCase().includes('descripción')) {
+      result.descripcion = body;
+    } else if (title.toLowerCase().includes('sintaxis') || title.toLowerCase().includes('opciones')) {
+      result.sintaxis += (result.sintaxis ? '\n\n' : '') + body;
+    } else if (title.toLowerCase().includes('ejemplos')) {
+      result.ejemplos = body;
+    }
+  });
+  
+  return result;
+}
+
+const sections = splitBySections(rawContent);
+---
+
+<Layout title={name}>
+  <div class="pt-30"></div>
+  <div class="text-white p-8 max-w-lg mx-auto w-96 border border-default rounded-base shadow-xs bg-gray-900/60 backdrop-blur-md">  
+    <h1 class="text-6xl font-bold mb-4 text-base-content text-center">{name}</h1>
+    <h5 class="text-base-content/70 mb-8 text-center">{description}</h5>
+    
+    <Tabs name={name} description={description}>
+      <div slot="descripcion" class="prose prose-invert" set:html={sections.descripcion}></div>
+      <div slot="sintaxis" class="prose prose-invert" set:html={sections.sintaxis}></div>
+      <div slot="ejemplos" class="prose prose-invert" set:html={sections.ejemplos}></div>
+    </Tabs>
+  </div>
+</Layout>

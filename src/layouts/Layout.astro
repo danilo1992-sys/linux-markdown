@@ -1,3 +1,9 @@
+---
+import '../styles/global.css';
+import Background from "../components/Background.astro"
+import Sidebar from "../components/Sidebar.astro"
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -8,8 +14,11 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
+  <body>
+  <Sidebar/>
+  <Background/>
 		<slot />
+		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 	</body>
 </html>
 
