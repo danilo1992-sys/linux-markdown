@@ -1,7 +1,7 @@
 ---
 import {getCollection, render} from 'astro:content'
 import Layout from "../../layouts/Layout.astro"
-import Tabs from "../../components/Tabs.astro"
+import Console from "../../components/Console.astro"
 
 const markdownFiles = import.meta.glob('/src/content/Linux/*.md', { query: '?raw', import: 'default' });
 
@@ -48,11 +48,9 @@ const sections = splitBySections(rawContent);
   <div class="text-white p-8 max-w-lg mx-auto w-96 border border-default rounded-base shadow-xs bg-gray-900/60 backdrop-blur-md">  
     <h1 class="text-6xl font-bold mb-4 text-base-content text-center">{name}</h1>
     <h5 class="text-base-content/70 mb-8 text-center">{description}</h5>
-    
-    <Tabs name={name} description={description}>
-      <div slot="descripcion" class="prose prose-invert" set:html={sections.descripcion}></div>
-      <div slot="sintaxis" class="prose prose-invert" set:html={sections.sintaxis}></div>
-      <div slot="ejemplos" class="prose prose-invert" set:html={sections.ejemplos}></div>
-    </Tabs>
+    <p class="prose max-w-none text-base-content">{sections.descripcion}</p> 
+  </div>
+  <div class="pt-15 pl-70 ">
+    <Console/>
   </div>
 </Layout>
