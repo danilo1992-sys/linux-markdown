@@ -1,18 +1,12 @@
 ---
 name: "killall"
-description: "Termina procesos por su nombre."
+description: "`killall` termina todos los procesos que coinciden con un nombre dado."
 ---
-
 
 ## Descripción
 
 `killall` termina todos los procesos que coinciden con un nombre dado.
 
-## Sintaxis
-
-```bash
-killall [señal] nombre_proceso
-```
 
 ## Ejemplos de uso
 

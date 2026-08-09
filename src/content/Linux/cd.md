@@ -1,18 +1,12 @@
 ---
 name: "cd"
-description: "Cambia de directorio actual."
+description: "`cd` (change directory) cambia el directorio de trabajo actual en la terminal."
 ---
-
 
 ## Descripción
 
 `cd` (change directory) cambia el directorio de trabajo actual en la terminal.
 
-## Sintaxis
-
-```bash
-cd [directorio]
-```
 
 ## Ejemplos de uso
 

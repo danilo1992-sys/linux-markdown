@@ -1,18 +1,12 @@
 ---
 name: "rm"
-description: "Elimina archivos o directorios."
+description: "`rm` (remove) elimina archivos o directorios de forma permanente."
 ---
-
 
 ## Descripción
 
 `rm` (remove) elimina archivos o directorios de forma permanente.
 
-## Sintaxis
-
-```bash
-rm [opciones] archivo
-```
 
 ## Ejemplos de uso
 

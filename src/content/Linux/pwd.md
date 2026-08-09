@@ -1,18 +1,12 @@
 ---
 name: "pwd"
-description: "Muestra el directorio de trabajo actual."
+description: "`pwd` (print working directory) imprime la ruta completa del directorio de trabajo actual."
 ---
-
 
 ## Descripción
 
 `pwd` (print working directory) imprime la ruta completa del directorio de trabajo actual.
 
-## Sintaxis
-
-```bash
-pwd
-```
 
 ## Ejemplos de uso
 

@@ -1,18 +1,12 @@
 ---
 name: "ping"
-description: "Envía paquetes ICMP a un host."
+description: "`ping` envía paquetes ICMP echo a una dirección de red para verificar la conectividad."
 ---
-
 
 ## Descripción
 
 `ping` envía paquetes ICMP echo a una dirección de red para verificar la conectividad.
 
-## Sintaxis
-
-```bash
-ping [opciones] host
-```
 
 ## Ejemplos de uso
 

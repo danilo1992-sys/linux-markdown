@@ -1,18 +1,11 @@
 ---
 name: "awk"
-description: "Procesa y forma texto en columnas."
+description: "`awk` es un lenguaje de procesamiento de texto que permite buscar, manipular y extraer información de archivos. Es ideal para trabajar con datos estructurados en columnas."
 ---
 
-
-## Descripción
+# Descripción
 
 `awk` es un lenguaje de procesamiento de texto que permite buscar, manipular y extraer información de archivos. Es ideal para trabajar con datos estructurados en columnas.
-
-## Sintaxis
-
-```bash
-awk 'patrón {acción}' archivo
-```
 
 ## Ejemplos de uso
 

@@ -1,18 +1,12 @@
 ---
 name: "df"
-description: "Muestra el espacio en disco disponible."
+description: "`df` (disk free) muestra el espacio en disco disponible en los sistemas de archivos montados."
 ---
-
 
 ## Descripción
 
 `df` (disk free) muestra el espacio en disco disponible en los sistemas de archivos montados.
 
-## Sintaxis
-
-```bash
-df [opciones]
-```
 
 ## Ejemplos de uso
 

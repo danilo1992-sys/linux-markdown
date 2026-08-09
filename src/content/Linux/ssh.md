@@ -1,18 +1,12 @@
 ---
 name: "ssh"
-description: "Acceso remoto seguro a otro sistema."
+description: "`ssh` (secure shell) permite conectarse de forma segura a otro sistema de forma remota."
 ---
-
 
 ## Descripción
 
 `ssh` (secure shell) permite conectarse de forma segura a otro sistema de forma remota.
 
-## Sintaxis
-
-```bash
-ssh [opciones] usuario@host
-```
 
 ## Ejemplos de uso
 

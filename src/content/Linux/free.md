@@ -1,18 +1,12 @@
 ---
 name: "free"
-description: "Muestra la memoria RAM disponible."
+description: "`free` muestra la cantidad de memoria RAM libre y usada en el sistema."
 ---
-
 
 ## Descripción
 
 `free` muestra la cantidad de memoria RAM libre y usada en el sistema.
 
-## Sintaxis
-
-```bash
-free [opciones]
-```
 
 ## Ejemplos de uso
 

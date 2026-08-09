@@ -1,18 +1,12 @@
 ---
 name: "du"
-description: "Muestra el uso de espacio en disco por archivo."
+description: "`du` (disk usage) estima y muestra el espacio en disco usado por archivos y directorios."
 ---
-
 
 ## Descripción
 
 `du` (disk usage) estima y muestra el espacio en disco usado por archivos y directorios.
 
-## Sintaxis
-
-```bash
-du [opciones] [archivo]
-```
 
 ## Ejemplos de uso
 

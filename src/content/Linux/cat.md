@@ -1,18 +1,12 @@
 ---
 name: "cat"
-description: "Muestra el contenido de un archivo."
+description: "`cat` (concatenate) muestra el contenido completo de uno o varios archivos en la salida estándar."
 ---
-
 
 ## Descripción
 
 `cat` (concatenate) muestra el contenido completo de uno o varios archivos en la salida estándar.
 
-## Sintaxis
-
-```bash
-cat [opciones] archivo...
-```
 
 ## Ejemplos de uso
 

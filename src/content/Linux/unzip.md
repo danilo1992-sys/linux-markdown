@@ -1,18 +1,12 @@
 ---
 name: "unzip"
-description: "Extrae archivos de un archivo ZIP."
+description: "`unzip` extrae archivos de un archivo comprimido en formato ZIP."
 ---
-
 
 ## Descripción
 
 `unzip` extrae archivos de un archivo comprimido en formato ZIP.
 
-## Sintaxis
-
-```bash
-unzip [opciones] archivo.zip
-```
 
 ## Ejemplos de uso
 

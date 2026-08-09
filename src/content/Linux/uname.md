@@ -1,18 +1,12 @@
 ---
 name: "uname"
-description: "Muestra información del sistema."
+description: "`uname` muestra información sobre el sistema operativo y el kernel."
 ---
-
 
 ## Descripción
 
 `uname` muestra información sobre el sistema operativo y el kernel.
 
-## Sintaxis
-
-```bash
-uname [opciones]
-```
 
 ## Ejemplos de uso
 

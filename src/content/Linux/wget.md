@@ -1,18 +1,12 @@
 ---
 name: "wget"
-description: "Descarga archivos de internet."
+description: "`wget` descarga archivos desde la web usando HTTP, HTTPS y FTP."
 ---
-
 
 ## Descripción
 
 `wget` descarga archivos desde la web usando HTTP, HTTPS y FTP.
 
-## Sintaxis
-
-```bash
-wget [opciones] URL
-```
 
 ## Ejemplos de uso
 

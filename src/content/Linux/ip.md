@@ -1,18 +1,12 @@
 ---
 name: "ip"
-description: "Muestra o configura interfaces de red."
+description: "`ip` es la herramienta moderna para administrar interfaces de red, direcciones IP, rutas y más."
 ---
-
 
 ## Descripción
 
 `ip` es la herramienta moderna para administrar interfaces de red, direcciones IP, rutas y más.
 
-## Sintaxis
-
-```bash
-ip [opciones] objeto
-```
 
 ## Ejemplos de uso
 

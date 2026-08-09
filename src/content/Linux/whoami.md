@@ -1,18 +1,12 @@
 ---
 name: "whoami"
-description: "Muestra el usuario actual."
+description: "`whoami` muestra el nombre del usuario actualmente conectado."
 ---
-
 
 ## Descripción
 
 `whoami` muestra el nombre del usuario actualmente conectado.
 
-## Sintaxis
-
-```bash
-whoami
-```
 
 ## Ejemplos de uso
 

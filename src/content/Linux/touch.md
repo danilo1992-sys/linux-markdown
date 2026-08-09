@@ -1,18 +1,12 @@
 ---
 name: "touch"
-description: "Crea un archivo vacío o actualiza su fecha de modificación."
+description: "`touch` crea archivos vacíos o actualiza la fecha de acceso y modificación de un archivo existente."
 ---
-
 
 ## Descripción
 
 `touch` crea archivos vacíos o actualiza la fecha de acceso y modificación de un archivo existente.
 
-## Sintaxis
-
-```bash
-touch archivo
-```
 
 ## Ejemplos de uso
 

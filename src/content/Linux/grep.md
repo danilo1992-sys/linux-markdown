@@ -1,18 +1,12 @@
 ---
 name: "grep"
-description: "Busca patrones en el texto de un archivo."
+description: "`grep` (global regular expression print) busca líneas que coinciden con un patrón en archivos de texto."
 ---
-
 
 ## Descripción
 
 `grep` (global regular expression print) busca líneas que coinciden con un patrón en archivos de texto.
 
-## Sintaxis
-
-```bash
-grep [opciones] patrón archivo
-```
 
 ## Ejemplos de uso
 

@@ -1,18 +1,12 @@
 ---
 name: "cut"
-description: "Extrae secciones de cada línea de un archivo."
+description: "`cut` extrae campos o caracteres específicos de cada línea de un archivo."
 ---
-
 
 ## Descripción
 
 `cut` extrae campos o caracteres específicos de cada línea de un archivo.
 
-## Sintaxis
-
-```bash
-cut [opciones] archivo
-```
 
 ## Ejemplos de uso
 

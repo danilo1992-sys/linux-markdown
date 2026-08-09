@@ -1,18 +1,12 @@
 ---
 name: "ps"
-description: "Muestra procesos en ejecución."
+description: "`ps` (process status) muestra información sobre los procesos activos en el sistema."
 ---
-
 
 ## Descripción
 
 `ps` (process status) muestra información sobre los procesos activos en el sistema.
 
-## Sintaxis
-
-```bash
-ps [opciones]
-```
 
 ## Ejemplos de uso
 

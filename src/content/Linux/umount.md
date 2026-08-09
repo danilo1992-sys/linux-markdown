@@ -1,18 +1,12 @@
 ---
 name: "umount"
-description: "Desmonta un sistema de archivos."
+description: "`umount` desmonta un sistema de archivos montado previamente con `mount`."
 ---
-
 
 ## Descripción
 
 `umount` desmonta un sistema de archivos montado previamente con `mount`.
 
-## Sintaxis
-
-```bash
-umount punto_montaje
-```
 
 ## Ejemplos de uso
 

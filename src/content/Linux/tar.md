@@ -1,18 +1,12 @@
 ---
 name: "tar"
-description: "Crea o extrae archivos comprimidos."
+description: "`tar` (tape archive) es una herramienta para empaquetar y desempaquetar archivos."
 ---
-
 
 ## Descripción
 
 `tar` (tape archive) es una herramienta para empaquetar y desempaquetar archivos.
 
-## Sintaxis
-
-```bash
-tar [opciones] archivo.tar.gz [archivos...]
-```
 
 ## Ejemplos de uso
 

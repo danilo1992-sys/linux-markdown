@@ -1,18 +1,12 @@
 ---
 name: "hostname"
-description: "Muestra el nombre del host del sistema."
+description: "`hostname` muestra o establece el nombre del host del sistema."
 ---
-
 
 ## Descripción
 
 `hostname` muestra o establece el nombre del host del sistema.
 
-## Sintaxis
-
-```bash
-hostname [opciones]
-```
 
 ## Ejemplos de uso
 

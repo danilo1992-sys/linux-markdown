@@ -1,18 +1,12 @@
 ---
 name: "sed"
-description: "Edita texto de forma automatizada."
+description: "`sed` (stream editor) es un editor de texto que procesa flujos de texto de forma no interactiva. Es muy potente para buscar, reemplazar y transformar texto."
 ---
-
 
 ## Descripción
 
 `sed` (stream editor) es un editor de texto que procesa flujos de texto de forma no interactiva. Es muy potente para buscar, reemplazar y transformar texto.
 
-## Sintaxis
-
-```bash
-sed [opciones] 'comando' archivo
-```
 
 ## Ejemplos de uso
 

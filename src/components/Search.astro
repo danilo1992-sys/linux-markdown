@@ -1,0 +1,42 @@
+---
+import SearchBox from 'astro-pagefind/components/Search.astro';
+---
+
+<div id="search" class="w-full max-w-md">
+  <SearchBox
+    className="block w-full"
+    searchboxOptions={{ placeholder: "Buscar Comando..." }}
+  />
+</div>
+
+<style is:global>
+  @reference "../styles/global.css";
+
+  #search .pagefind-ui__search-input {
+    @apply w-full p-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan;
+  }
+  #search .pagefind-ui__result {
+    @apply bg-slate-900 border border-slate-700 rounded-lg p-4 hover:bg-slate-800;
+  }
+  #search .pagefind-ui__result-title {
+    @apply text-cyan font-semibold;
+  }
+  #search .pagefind-ui__result-excerpt {
+    @apply text-slate-300 text-sm mt-1;
+  }
+  #search .pagefind-ui__message {
+    @apply text-slate-500 text-center py-4;
+  }
+  #search .pagefind-ui__result-link {
+    @apply block;
+  }
+</style>
+
+<script>
+  document.addEventListener('astro:after-swap', () => {
+    const searchEl = document.getElementById('search');
+    if (searchEl && searchEl.querySelector('.pagefind-ui')) {
+      searchEl.querySelector('.pagefind-ui').dispatchEvent(new Event('pagefind-ui:refresh'));
+    }
+  });
+</script>

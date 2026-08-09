@@ -1,18 +1,12 @@
 ---
 name: "scp"
-description: "Copia archivos entre sistemas de forma segura."
+description: "`scp` (secure copy) copia archivos de forma segura entre sistemas usando SSH."
 ---
-
 
 ## Descripción
 
 `scp` (secure copy) copia archivos de forma segura entre sistemas usando SSH.
 
-## Sintaxis
-
-```bash
-scp [opciones] origen destino
-```
 
 ## Ejemplos de uso
 

@@ -1,18 +1,12 @@
 ---
 name: "head"
-description: "Muestra las primeras líneas de un archivo."
+description: "`head` muestra las primeras líneas de un archivo. Por defecto muestra 10 líneas."
 ---
-
 
 ## Descripción
 
 `head` muestra las primeras líneas de un archivo. Por defecto muestra 10 líneas.
 
-## Sintaxis
-
-```bash
-head [opciones] archivo
-```
 
 ## Ejemplos de uso
 

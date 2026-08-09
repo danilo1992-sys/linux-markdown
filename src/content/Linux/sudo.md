@@ -1,18 +1,12 @@
 ---
 name: "sudo"
-description: "Ejecuta comandos con privilegios de superusuario."
+description: "`sudo` (superuser do) ejecuta comandos con los privilegios del usuario root (superusuario)."
 ---
-
 
 ## Descripción
 
 `sudo` (superuser do) ejecuta comandos con los privilegios del usuario root (superusuario).
 
-## Sintaxis
-
-```bash
-sudo [opciones] comando
-```
 
 ## Ejemplos de uso
 

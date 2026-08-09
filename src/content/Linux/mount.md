@@ -1,18 +1,12 @@
 ---
 name: "mount"
-description: "Monta un sistema de archivos."
+description: "`mount` monta un sistema de archivos en un punto del árbol de directorios."
 ---
-
 
 ## Descripción
 
 `mount` monta un sistema de archivos en un punto del árbol de directorios.
 
-## Sintaxis
-
-```bash
-mount [opciones] dispositivo punto_montaje
-```
 
 ## Ejemplos de uso
 

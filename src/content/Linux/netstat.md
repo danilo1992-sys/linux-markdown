@@ -1,18 +1,12 @@
 ---
 name: "netstat"
-description: "Muestra conexiones de red y estadísticas."
+description: "`netstat` (network statistics) muestra conexiones de red activas, tablas de enrutamiento y estadísticas de interfaz."
 ---
-
 
 ## Descripción
 
 `netstat` (network statistics) muestra conexiones de red activas, tablas de enrutamiento y estadísticas de interfaz.
 
-## Sintaxis
-
-```bash
-netstat [opciones]
-```
 
 ## Ejemplos de uso
 

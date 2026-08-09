@@ -1,18 +1,12 @@
 ---
 name: "tail"
-description: "Muestra las últimas líneas de un archivo."
+description: "`tail` muestra las últimas líneas de un archivo. Por defecto muestra 10 líneas."
 ---
-
 
 ## Descripción
 
 `tail` muestra las últimas líneas de un archivo. Por defecto muestra 10 líneas.
 
-## Sintaxis
-
-```bash
-tail [opciones] archivo
-```
 
 ## Ejemplos de uso
 

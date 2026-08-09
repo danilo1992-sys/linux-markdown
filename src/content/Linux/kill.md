@@ -1,18 +1,12 @@
 ---
 name: "kill"
-description: "Termina procesos por su PID."
+description: "`kill` envía una señal a un proceso para terminarlo o controlarlo."
 ---
-
 
 ## Descripción
 
 `kill` envía una señal a un proceso para terminarlo o controlarlo.
 
-## Sintaxis
-
-```bash
-kill [señal] PID
-```
 
 ## Ejemplos de uso
 

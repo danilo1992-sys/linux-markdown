@@ -1,18 +1,12 @@
 ---
 name: "less"
-description: "Muestra el contenido de un archivo paginado."
+description: "`less` es un visor de archivos que permite navegar por el contenido de forma paginada, sin cargar todo el archivo en memoria."
 ---
-
 
 ## Descripción
 
 `less` es un visor de archivos que permite navegar por el contenido de forma paginada, sin cargar todo el archivo en memoria.
 
-## Sintaxis
-
-```bash
-less [opciones] archivo
-```
 
 ## Ejemplos de uso
 

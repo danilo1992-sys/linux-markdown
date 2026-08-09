@@ -1,18 +1,12 @@
 ---
 name: "wc"
-description: "Cuenta líneas, palabras y caracteres."
+description: "`wc` (word count) cuenta el número de líneas, palabras y caracteres de un archivo o de la entrada estándar."
 ---
-
 
 ## Descripción
 
 `wc` (word count) cuenta el número de líneas, palabras y caracteres de un archivo o de la entrada estándar.
 
-## Sintaxis
-
-```bash
-wc [opciones] archivo
-```
 
 ## Ejemplos de uso
 

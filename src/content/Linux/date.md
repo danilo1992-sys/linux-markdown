@@ -1,18 +1,12 @@
 ---
 name: "date"
-description: "Muestra o establece la fecha y hora del sistema."
+description: "`date` muestra la fecha y hora actual del sistema, o permite establecer una nueva fecha."
 ---
-
 
 ## Descripción
 
 `date` muestra la fecha y hora actual del sistema, o permite establecer una nueva fecha.
 
-## Sintaxis
-
-```bash
-date [opciones] [+formato]
-```
 
 ## Ejemplos de uso
 

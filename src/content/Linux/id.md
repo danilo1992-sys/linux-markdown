@@ -1,18 +1,12 @@
 ---
 name: "id"
-description: "Muestra información del usuario actual."
+description: "`id` muestra el ID de usuario, ID de grupo y grupos del usuario actual o especificado."
 ---
-
 
 ## Descripción
 
 `id` muestra el ID de usuario, ID de grupo y grupos del usuario actual o especificado.
 
-## Sintaxis
-
-```bash
-id [usuario]
-```
 
 ## Ejemplos de uso
 

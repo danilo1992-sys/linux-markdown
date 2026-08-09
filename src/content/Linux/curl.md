@@ -1,18 +1,12 @@
 ---
 name: "curl"
-description: "Transfiere datos desde o hacia un servidor."
+description: "`curl` transfiere datos a o desde un servidor usando diversos protocolos como HTTP, FTP, SCP, etc."
 ---
-
 
 ## Descripción
 
 `curl` transfiere datos a o desde un servidor usando diversos protocolos como HTTP, FTP, SCP, etc.
 
-## Sintaxis
-
-```bash
-curl [opciones] URL
-```
 
 ## Ejemplos de uso
 

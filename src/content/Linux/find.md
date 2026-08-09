@@ -1,18 +1,12 @@
 ---
 name: "find"
-description: "Busca archivos en un directorio."
+description: "`find` busca archivos y directorios en una jerarquía según criterios especificados."
 ---
-
 
 ## Descripción
 
 `find` busca archivos y directorios en una jerarquía según criterios especificados.
 
-## Sintaxis
-
-```bash
-find [directorio] [criterios]
-```
 
 ## Ejemplos de uso
 

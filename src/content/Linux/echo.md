@@ -1,18 +1,12 @@
 ---
 name: "echo"
-description: "Muestra un texto o variable en la terminal."
+description: "`echo` muestra una línea de texto o el valor de una variable en la salida estándar."
 ---
-
 
 ## Descripción
 
 `echo` muestra una línea de texto o el valor de una variable en la salida estándar.
 
-## Sintaxis
-
-```bash
-echo [opciones] texto
-```
 
 ## Ejemplos de uso
 

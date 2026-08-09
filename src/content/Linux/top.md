@@ -1,18 +1,12 @@
 ---
 name: "top"
-description: "Monitorea procesos en tiempo real."
+description: "`top` muestra información en tiempo real sobre los procesos activos del sistema, incluyendo uso de CPU y memoria."
 ---
-
 
 ## Descripción
 
 `top` muestra información en tiempo real sobre los procesos activos del sistema, incluyendo uso de CPU y memoria.
 
-## Sintaxis
-
-```bash
-top [opciones]
-```
 
 ## Ejemplos de uso
 

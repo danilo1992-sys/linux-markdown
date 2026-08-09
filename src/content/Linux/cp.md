@@ -1,18 +1,12 @@
 ---
 name: "cp"
-description: "Copia archivos o directorios."
+description: "`cp` (copy) crea una copia de archivos o directorios en otra ubicación."
 ---
-
 
 ## Descripción
 
 `cp` (copy) crea una copia de archivos o directorios en otra ubicación.
 
-## Sintaxis
-
-```bash
-cp [opciones] origen destino
-```
 
 ## Ejemplos de uso
 

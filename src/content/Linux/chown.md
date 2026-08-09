@@ -1,18 +1,12 @@
 ---
 name: "chown"
-description: "Cambia el propietario de un archivo o directorio."
+description: "`chown` (change owner) cambia el propietario y/o grupo de un archivo o directorio."
 ---
-
 
 ## Descripción
 
 `chown` (change owner) cambia el propietario y/o grupo de un archivo o directorio.
 
-## Sintaxis
-
-```bash
-chown usuario:grupo archivo
-```
 
 ## Ejemplos de uso
 

@@ -1,18 +1,12 @@
 ---
 name: "chmod"
-description: "Cambia los permisos de un archivo o directorio."
+description: "`chmod` (change mode) modifica los permisos de lectura, escritura y ejecución de archivos y directorios."
 ---
-
 
 ## Descripción
 
 `chmod` (change mode) modifica los permisos de lectura, escritura y ejecución de archivos y directorios.
 
-## Sintaxis
-
-```bash
-chmod modo archivo
-```
 
 ## Ejemplos de uso
 

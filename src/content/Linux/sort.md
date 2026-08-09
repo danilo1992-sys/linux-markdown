@@ -1,18 +1,12 @@
 ---
 name: "sort"
-description: "Ordena líneas de texto."
+description: "`sort` ordena las líneas de un archivo de texto."
 ---
-
 
 ## Descripción
 
 `sort` ordena las líneas de un archivo de texto.
 
-## Sintaxis
-
-```bash
-sort [opciones] archivo
-```
 
 ## Ejemplos de uso
 

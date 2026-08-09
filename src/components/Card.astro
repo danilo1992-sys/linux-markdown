@@ -7,7 +7,7 @@ const Linux = await getCollection('Linux');
 <div class="pl-5 pt-22 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 min-h-screen">
   {Linux.map((item) => (
   <a href={`/Linux/${item.id}`} class="block max-w-sm p-6 border border-default rounded-base shadow-xs bg-gray-900/60 backdrop-blur-md">
-      <h5 class="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8 text-white">{item.data.name}</h5>
+    <h5 class="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8 text-white" transition:name=`hero-${item.id}`>{item.data.name}</h5>
       <p class="text-body text-white">{item.data.description}</p>
     </a>
   ))}

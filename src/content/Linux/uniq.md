@@ -1,18 +1,12 @@
 ---
 name: "uniq"
-description: "Elimina líneas duplicadas de un archivo."
+description: "`uniq` elimina o reporta líneas duplicadas de un archivo ordenado."
 ---
-
 
 ## Descripción
 
 `uniq` elimina o reporta líneas duplicadas de un archivo ordenado.
 
-## Sintaxis
-
-```bash
-uniq [opciones] archivo
-```
 
 ## Ejemplos de uso
 

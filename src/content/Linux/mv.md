@@ -1,18 +1,12 @@
 ---
 name: "mv"
-description: "Mueve o renombra archivos o directorios."
+description: "`mv` (move) mueve archivos o directorios de una ubicación a otra, o los renombra."
 ---
-
 
 ## Descripción
 
 `mv` (move) mueve archivos o directorios de una ubicación a otra, o los renombra.
 
-## Sintaxis
-
-```bash
-mv [opciones] origen destino
-```
 
 ## Ejemplos de uso
 

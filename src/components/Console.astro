@@ -1,9 +1,42 @@
- <aside class=" bg-gray-900/60 backdrop-blur-md p-6 rounded-lg w-full max-w-lg font-mono border border-white">
-  <div class="flex justify-between items-center">
+---
+const {content} = Astro.props
+
+function extractExamples(md) {
+  const examples = [];
+  
+  // Find "## Ejemplos de uso" section
+  const sectionMatch = md.match(/## Ejemplos de uso\n\n([\s\S]*?)(?=\n## |$)/);
+  if (!sectionMatch) return examples;
+  
+  const section = sectionMatch[1];
+  
+  // Extract examples from the section
+  const regex = /([^\n]+):\n\n```bash\n([\s\S]*?)```/g;
+  let match;
+  while ((match = regex.exec(section)) !== null) {
+    const title = match[1].trim();
+    const cmd = match[2].trim().split('\n')[0].trim();
+    if (cmd && !cmd.includes('[') && !cmd.includes('...')) {
+      examples.push({ title, cmd });
+    }
+  }
+  return examples;
+}
+
+const examples = extractExamples(content);
+---
+
+<aside class="bg-gray-900/60 backdrop-blur-md p-6 rounded-lg w-96 max-w-lg font-mono border border-white">
+  <div class="flex">
     <p class="text-sm text-white">bash</p>
   </div>
-  <div class="mt-4">
-    <p class="text-green-400">$ npm install next</p>
+  <div class="mt-4 space-y-4">
+    {examples.map((ex) => (
+      <div>
+        <p class="text-gray-400 text-xs mb-1">{ex.title}</p>
+        <p class="text-green-400">$ {ex.cmd}</p>
+      </div>
+    ))}
   </div>
 </aside>
 

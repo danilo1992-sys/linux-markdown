@@ -1,18 +1,12 @@
 ---
 name: "mkdir"
-description: "Crea un nuevo directorio."
+description: "`mkdir` (make directory) crea uno o más directorios nuevos."
 ---
-
 
 ## Descripción
 
 `mkdir` (make directory) crea uno o más directorios nuevos.
 
-## Sintaxis
-
-```bash
-mkdir [opciones] directorio
-```
 
 ## Ejemplos de uso
 

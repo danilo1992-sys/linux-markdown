@@ -1,20 +1,12 @@
 ---
 name: "ls"
-description: "Lista el contenido de un directorio."
+description: "`ls` (list) muestra el contenido de un directorio: archivos y subdirectorios. Es uno de los comandos más usados en Linux."
 ---
-
 
 ## Descripción
 
 `ls` (list) muestra el contenido de un directorio: archivos y subdirectorios. Es uno de los comandos más usados en Linux.
 
-## Sintaxis
-
-```bash
-ls [opciones] [ruta]
-```
-
-Sin argumentos, lista el directorio actual. Se pueden indicar una o más rutas separadas por espacio.
 
 ## Opciones comunes
 

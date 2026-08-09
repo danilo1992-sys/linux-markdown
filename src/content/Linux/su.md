@@ -1,18 +1,12 @@
 ---
 name: "su"
-description: "Cambia de usuario."
+description: "`su` (substitute user) permite cambiar al usuario root o a otro usuario."
 ---
-
 
 ## Descripción
 
 `su` (substitute user) permite cambiar al usuario root o a otro usuario.
 
-## Sintaxis
-
-```bash
-su [opciones] [usuario]
-```
 
 ## Ejemplos de uso
 

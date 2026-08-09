@@ -1,18 +1,12 @@
 ---
 name: "gzip"
-description: "Comprime archivos con algoritmo gzip."
+description: "`gzip comprime archivos usando el algoritmo de compresión Lempel-Ziv. El archivo original se reemplaza por una versión comprimida `.gz`."
 ---
-
 
 ## Descripción
 
 `gzip comprime archivos usando el algoritmo de compresión Lempel-Ziv. El archivo original se reemplaza por una versión comprimida `.gz`.
 
-## Sintaxis
-
-```bash
-gzip [opciones] archivo
-```
 
 ## Ejemplos de uso
 
