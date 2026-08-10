@@ -2,7 +2,6 @@
 import '../styles/global.css';
 import Background from "../components/Background.astro"
 import Sidebar from "../components/Sidebar.astro"
-import Foter from "../components/Footer.astro"
 import { ClientRouter } from 'astro:transitions';
 ---
 
@@ -20,7 +19,6 @@ import { ClientRouter } from 'astro:transitions';
   <Background/>
     <slot />
 		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
-  <Sidebar/>
 	</body>
 </html>
 
