@@ -1,0 +1,14 @@
+name: Linux-Markdown
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pipeline netflify
+        run: |
+          curl -x POST -d '' ${{ secrets.LINUX_MARKDOWN }}
