@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Background from "../components/Background.astro"
 import Sidebar from "../components/Sidebar.astro"
+import Footer from "../components/Footer.astro"
 import { ClientRouter } from 'astro:transitions';
 ---
 
@@ -14,10 +15,13 @@ import { ClientRouter } from 'astro:transitions';
 		<title>Linux Commands</title>
 		<ClientRouter />
 	</head>
-  <body>
+  <body class="flex flex-col min-h-screen">
   <Sidebar/>
   <Background/>
-    <slot />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer/>
 		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 	</body>
 </html>

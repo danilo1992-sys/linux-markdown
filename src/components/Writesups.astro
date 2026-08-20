@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content'
+
+const imageModules = import.meta.glob('/src/content/obsidian/Ciberceguridad/Blue/*.{png,jpg,jpeg,gif,webp}', { query: '?url', import: 'default' })
+
+const items = await getCollection('Ciberceguridad')
+
+const resolvedItems = await Promise.all(items.map(async (item) => {
+  const { name, description, image, os, platform,difficult } = item.data
+  let resolvedImage = null
+  if (image) {
+    if (image.startsWith('http://') || image.startsWith('https://')) {
+      resolvedImage = image
+    } else {
+      const key = `/src/content/obsidian/Ciberceguridad/${image.replace('./', '')}`
+      if (imageModules[key]) {
+        resolvedImage = await imageModules[key]()
+      }
+    }
+  }
+  return { ...item, resolvedImage }
+}))
+---
+
+<div class="mt-30 pl-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+  {resolvedItems.map((item) => (
+    <a href={`/Ciberceguridad/${item.id}`} class="bg-gray-900/60 backdrop-blur-md dflex flex-col items-center p-6 border border-default rounded-base shadow-xs">
+      {item.resolvedImage && (
+        <img class="object-cover w-full rounded-base h-64 mb-4" src={item.resolvedImage} alt={item.data.name}>
+      )}
+      <div class="flex flex-col justify-between leading-normal">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">{item.data.name}</h5>
+        <p class="text-white mb-2">{item.data.description}</p>
+        {item.data.difficult && <span class="text-sm font-medium text-gray-400">{item.data.difficult}</span>}
+      </div>
+    </a>
+  ))}
+</div>

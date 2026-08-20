@@ -1,0 +1,7 @@
+---
+const { tags } = Astro.props
+---
+
+{tags.filter(t => t.value).map(t => (
+  <span class="bg-gray-900 backdrop-blur-md border border-default text-white text-xs font-normal px-1.5 py-0.5 rounded">{t.value}</span>
+))}

@@ -1,0 +1,7 @@
+--- 
+const { links } = Astro.props
+---
+
+{links?.filter(t => t.value).map(t => (
+<a target="_blank" href={t.value} class="bg-neutral-secondary-medium hover:bg-neutral-tertiary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">link</a>
+))}

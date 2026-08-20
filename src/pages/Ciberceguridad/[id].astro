@@ -1,0 +1,44 @@
+---
+import {getCollection, render} from 'astro:content'
+import Layout from "../../layouts/Layout.astro"
+import Tags from '../../components/Tags.astro'
+import Link from '../../components/Link.astro'
+
+export async function getStaticPaths(){
+  const items = await getCollection("Ciberceguridad")
+  return items.map((item) => ({
+    params: {id: item.id},
+    props: {item}
+  }))
+}
+
+const {item} = Astro.props
+const {name, description, difficult, platform, os, link} = item.data
+const {Content} = await render(item)
+
+const tags = [
+  { value: os },
+  { value: platform },
+  { value: difficult },
+]
+const links = [
+  { value: link }
+]
+
+---
+
+<Layout title={name}>
+  <div class="pt-30 max-w-4xl mx-auto px-4">
+    <div class="text-white p-8 border border-default rounded-base shadow-xs bg-gray-900/60 backdrop-blur-md">  
+      <h1 class="text-6xl font-bold mb-4 text-base-content text-center">{name}</h1>
+      <h5 class="text-base-content/70 mb-4 text-center">{description}</h5>
+        <div class="text-center mb-4 flex justify-center gap-2">
+        <Tags tags={tags}/>
+        <Link links={links} />
+        </div>
+    </div>
+    <div class=" text-white p-8 border border-default rounded-base shadow-xs bg-gray-900/60 backdrop-blur-md mt-10">
+      <Content/>  
+    </div>
+  </div>
+</Layout>

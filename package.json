@@ -7,6 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "pull": "git -C src/content pull origin master",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
