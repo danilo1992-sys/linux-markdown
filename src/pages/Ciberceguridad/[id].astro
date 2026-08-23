@@ -3,6 +3,7 @@ import {getCollection, render} from 'astro:content'
 import Layout from "../../layouts/Layout.astro"
 import Tags from '../../components/Tags.astro'
 import Link from '../../components/Link.astro'
+import Share from '../../components/Share.astro'
 
 export async function getStaticPaths(){
   const items = await getCollection("Ciberceguridad")
@@ -25,11 +26,14 @@ const links = [
   { value: link }
 ]
 
+const currentUrl = Astro.url.href.replace('http://', 'https://') 
+
 ---
 
-<Layout title={name}>
+<Layout title={name} description={description} url={currentUrl}>
   <div class="pt-30 max-w-4xl mx-auto px-4">
     <div class="text-white p-8 border border-default rounded-base shadow-xs bg-gray-900/60 backdrop-blur-md">  
+  <Share name={name} url={currentUrl} />
       <h1 class="text-6xl font-bold mb-4 text-base-content text-center">{name}</h1>
       <h5 class="text-base-content/70 mb-4 text-center">{description}</h5>
         <div class="text-center mb-4 flex justify-center gap-2">

@@ -8,6 +8,9 @@ import pagefind from 'astro-pagefind';
 export default defineConfig({
   integrations: [pagefind()],
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    server: {
+      allowedHosts: ['nextel-processed-promoting-regulations.trycloudflare.com']
+    }
   }
 });

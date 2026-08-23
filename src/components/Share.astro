@@ -1,0 +1,66 @@
+---
+import Compartir from './icons/Compartir.astro'
+import Linkedin from './icons/Linkedin.astro'
+
+interface Props {
+  name: string;
+  url: string;
+}
+
+const { url = '', name = '' } = Astro.props
+
+const encodedUrl = encodeURIComponent(url)
+const encodedName = encodeURIComponent(name)
+
+const shareLinks = [
+  { label: 'Copiar enlace', href: '#', icon: 'copy', action: 'copy' },
+  { label: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`, icon: 'linkedin' },
+  { label: 'Twitter', href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedName}`, icon: 'twitter' },
+]
+
+const shareId = `share-${Math.random().toString(36).slice(2, 9)}`
+---
+
+<div class="relative flex justify-end">
+  <button
+    onclick={`document.getElementById('${shareId}').classList.toggle('hidden')`}
+    class="inline-flex items-center text-white bg-gray-900/60 backdrop-blur-md box-border border border-default hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none transition-colors"
+    type="button"
+  >
+    <Compartir />
+  </button>
+  <div
+    id={shareId}
+    class="hidden absolute right-0 mt-2 z-10 bg-gray-900/60 backdrop-blur-md border border-default-medium rounded-base shadow-lg w-44"
+  >
+    <ul class="p-2 text-sm text-body font-medium">
+      {shareLinks.map((item) => (
+        <li>
+          {item.action === 'copy' ? (
+            <button
+              onclick={`navigator.clipboard.writeText('${url}').then(()=>{this.querySelector('span').textContent='Copiado!';setTimeout(()=>{this.querySelector('span').textContent='${item.label}'},2000)})`}
+              class="text-white inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded transition-colors cursor-pointer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" /><path d="M9 3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v1a1 1 0 0 0 1 1h-4a1 1 0 0 0 -1 -1z" /></svg>
+              <span>{item.label}</span>
+            </button>
+          ) : (
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded transition-colors"
+            >
+              {item.icon === 'linkedin' && <Linkedin />}
+              {item.icon === 'twitter' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+              )}
+
+              <span class="ml-2">{item.label}</span>
+            </a>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>

@@ -2,6 +2,7 @@
 import {getCollection, render} from 'astro:content'
 import Layout from "../../layouts/Layout.astro"
 import Console from "../../components/Console.astro"
+import Share from "../../components/Share.astro"
 
 const markdownFiles = import.meta.glob('/src/content/Linux/*.md', { query: '?raw', import: 'default' });
 
@@ -18,11 +19,14 @@ const {name, description} = item.data
 const {Content} = await render(item)
 
 const rawContent = await markdownFiles[`/src/content/Linux/${item.id}.md`]();
+
+const currentUrl = Astro.url.href.replace('http://', 'https://')
 ---
 
-<Layout title={name}>
+<Layout title={name} description={description} url={currentUrl}>
   <div class="pt-30 max-w-lg mx-auto w-96">
     <div class="text-white p-8 border border-default rounded-base shadow-xs bg-gray-900/60 backdrop-blur-md">  
+  <Share name={name} url={currentUrl} />
       <h1 class="text-6xl font-bold mb-4 text-base-content text-center">{name}</h1>
       <h5 class="text-base-content/70 mb-8 text-center">{description}</h5>
     </div>
