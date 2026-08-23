@@ -6,6 +6,7 @@ import pagefind from 'astro-pagefind';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://meek-beignet-1b2647.netlify.app',
   integrations: [pagefind()],
   vite: {
     plugins: [tailwindcss()],

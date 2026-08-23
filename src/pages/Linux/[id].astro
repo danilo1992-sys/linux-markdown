@@ -20,7 +20,7 @@ const {Content} = await render(item)
 
 const rawContent = await markdownFiles[`/src/content/Linux/${item.id}.md`]();
 
-const currentUrl = Astro.url.href.replace('http://', 'https://')
+const currentUrl = new URL(Astro.url.pathname, Astro.site).href
 ---
 
 <Layout title={name} description={description} url={currentUrl}>
