@@ -1,8 +1,8 @@
 ---
-
 import Linux from './icons/Linux.astro'
 import Hack from './icons/Hack.astro'
 import Go from './icons/Go.astro'
+import Git from './icons/Git.astro'
 
 const tags = {
   LINUX: {
@@ -13,6 +13,9 @@ const tags = {
   }, 
   GO: {
     Icon: Go
+  },
+  GIT: {
+    Icon: Git 
   }
 }
 
@@ -32,6 +35,11 @@ const CARD = [
     link:"https://shimmering-cocada-715705.netlify.app/",
     external: true,
     tags: [tags.GO]
+  },
+  { 
+    title:"Git",
+    link:"/Git",
+    tags: [tags.GIT]
   }
 ] 
 

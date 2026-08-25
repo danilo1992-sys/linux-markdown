@@ -26,4 +26,11 @@ const Ciberceguridad = defineCollection({
   }),
 });
 
-export const collections = { Linux, Ciberceguridad };
+const Git = defineCollection({
+  loader: glob({ base: "./src/content/Git", pattern: "**/*.md" }),
+  schema: z.object({
+    name: z.string(),
+    description: z.string(),
+  }),
+});
+export const collections = { Linux, Ciberceguridad, Git };
