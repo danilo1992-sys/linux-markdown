@@ -1,8 +1,15 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Writetups from '../../components/Writesups.astro'
+import Verticalmenu from '../../components/Verticalmenu.astro'
+
 ---
 
 <Layout title="Writetups">
-  <Writetups/>
+  <div class="flex mt-10 pl-5">
+    <div class="w-fit mr-6 pt-10 sticky top-30 self-start">
+      <Verticalmenu/>
+    </div>
+    <Writetups/>
+  </div>
 </Layout>

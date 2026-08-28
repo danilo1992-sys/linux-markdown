@@ -1,0 +1,64 @@
+---
+import Linux from './icons/Linux.astro'
+import Hack from './icons/Hack.astro'
+import Go from './icons/Go.astro'
+import Git from './icons/Git.astro'
+
+const tags = {
+  LINUX: {
+    Icon: Linux
+  },
+   HACKING: {
+    Icon: Hack 
+  }, 
+  GO: {
+    Icon: Go
+  },
+  GIT: {
+    Icon: Git 
+  }
+}
+
+const CARD = [
+  { 
+    title:"Linux",
+    link:"/Linux",
+    tags: [tags.LINUX]
+  },
+  { 
+    title:"Ciberceguridad",
+    link:"/Ciberceguridad",
+    tags: [tags.HACKING]
+  },
+  { 
+    title:"Go",
+    link:"https://shimmering-cocada-715705.netlify.app/",
+    external: true,
+    tags: [tags.GO]
+  },
+  { 
+    title:"Git",
+    link:"/Git",
+    tags: [tags.GIT]
+  }
+]
+---
+<div
+  class="flex flex-col justify-center items-center relative transition-all duration-[450ms] ease-in-out w-16"
+>
+  {CARD.map((card) => (
+    <article
+      class="border border-solid border-gray-700 w-full ease-in-out duration-500 left-0 rounded-2xl inline-block shadow-lg shadow-black/15 bg-gray-900/60 backdrop-blur-md mb-2"
+    >
+      <a
+        href={card.link}
+        class="has-[:checked]:shadow-lg relative w-full h-16 p-4 ease-in-out duration-300 border-solid border-black/10 has-[:checked]:border group flex flex-row gap-3 items-center justify-center text-black rounded-xl"
+        {...card.external && { target: "_blank", rel: "noopener noreferrer" }}
+      >
+        {card.tags.map((tag) => (
+          <tag.Icon />
+        ))}
+      </a>
+    </article>
+  ))}
+</div>
